@@ -53,3 +53,12 @@ open "/Applications/Eye Contact.app"   # registers the plug-in; restart Final Cu
 - Parameters: Strength, Target X/Y, Max Correction, Smoothing, Iris Size, Show Tracking
 - Ad-hoc signed for personal use. No developer team is needed
 - If FCP doesn't list the effect, check `pluginkit -m -v -p FxPlug` and Console for "Eye Contact"
+
+## License
+
+- Source code: [MIT](LICENSE)
+- Trained GazeWarp models (`EyeContactFx/Plugin/*.mlpackage`): [CC BY-NC 4.0](LICENSE-MODELS). They were trained on the
+  [Columbia Gaze Data Set](https://www.cs.columbia.edu/CAVE/databases/columbia_gaze/) (non-commercial research use only),
+  so they inherit that restriction. Cite Smith et al., "Gaze Locking", UIST 2013 if you use them.
+- Third-party, not included here: [LivePortrait](https://github.com/KwaiVGI/LivePortrait) is MIT, but the InsightFace
+  detection models it downloads are non-commercial research only. MediaPipe (used by `gazenet/` for data prep) is Apache 2.0.

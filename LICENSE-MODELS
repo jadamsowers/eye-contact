@@ -1,0 +1,32 @@
+Model Weights License
+
+Copyright (c) 2026 Adam Sowers
+
+Scope: the trained GazeWarp models in this repository, i.e.
+
+  EyeContactFx/Plugin/GazeWarpV2.mlpackage
+  EyeContactFx/Plugin/GazeWarpV3.mlpackage
+
+and any checkpoints or exports derived from them.
+
+These models are licensed under the Creative Commons Attribution-NonCommercial
+4.0 International License (CC BY-NC 4.0):
+https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Training data
+-------------
+The models were trained on eye patches extracted from the Columbia Gaze Data
+Set, which is made available for non-commercial research purposes only. Your
+use of these models is also subject to the dataset's terms:
+https://www.cs.columbia.edu/CAVE/databases/columbia_gaze/
+
+If you use these models, please cite the dataset:
+
+  Brian A. Smith, Qi Yin, Steven K. Feiner, and Shree K. Nayar.
+  "Gaze Locking: Passive Eye Contact Detection for Human-Object Interaction."
+  ACM Symposium on User Interface Software and Technology (UIST), 2013.
+
+For commercial use, remove these models and train replacements on data you
+are licensed to use commercially (see gazenet/).
+
+THE MODELS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
