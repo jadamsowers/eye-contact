@@ -1,0 +1,73 @@
+# Generate the Xcode project with: xcodegen
+# Mirrors Apple's "FxPlug 4" Xcode template (Swift), plus the EyeContactCore package.
+name: EyeContactFx
+options:
+  bundleIdPrefix: local.eyecontact
+  deploymentTarget:
+    macOS: "14.0"
+packages:
+  EyeContactKit:
+    path: ../EyeContactKit
+settings:
+  base:
+    ADDITIONAL_SDKS: /Library/Developer/SDKs/FxPlug.sdk
+    # ADDITIONAL_SDKS alone no longer exposes the headers to Swift bridging; point at the SDK too.
+    FRAMEWORK_SEARCH_PATHS: /Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks /Library/Developer/Frameworks $(inherited)
+    SWIFT_VERSION: "5"
+    # Personal use: ad-hoc signing, no Apple developer team needed.
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "-"
+    DEVELOPMENT_TEAM: ""
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+targets:
+  EyeContact:
+    type: application
+    platform: macOS
+    sources: [App]
+    settings:
+      base:
+        PRODUCT_NAME: Eye Contact
+        PRODUCT_BUNDLE_IDENTIFIER: local.eyecontact.app
+        INFOPLIST_FILE: App/Info.plist
+        CODE_SIGN_ENTITLEMENTS: App/SandboxEntitlements.entitlements
+        ENABLE_HARDENED_RUNTIME: NO
+    dependencies:
+      - target: EyeContactXPC
+        embed: true
+        copy:
+          destination: plugins
+  EyeContactXPC:
+    type: bundle
+    platform: macOS
+    sources: [Plugin]
+    settings:
+      base:
+        PRODUCT_NAME: Eye Contact XPC Service
+        PRODUCT_BUNDLE_IDENTIFIER: local.eyecontact.app.xpc
+        CURRENT_PROJECT_VERSION: "2"
+        MACH_O_TYPE: mh_execute
+        WRAPPER_EXTENSION: pluginkit
+        INFOPLIST_FILE: Plugin/Info.plist
+        SWIFT_OBJC_BRIDGING_HEADER: Plugin/Bridging-Header.h
+        # PlugInKit services hosted by Final Cut Pro run sandboxed.
+        CODE_SIGN_ENTITLEMENTS: Plugin/Plugin.entitlements
+        LD_RUNPATH_SEARCH_PATHS: $(inherited) @loader_path/../Frameworks
+    dependencies:
+      - package: EyeContactKit
+        product: EyeContactCore
+      - framework: /Library/Developer/Frameworks/FxPlug.framework
+        embed: false
+      - framework: /Library/Developer/Frameworks/PluginManager.framework
+        embed: false
+      - sdk: Accelerate.framework
+    postBuildScripts:
+      - name: Copy and Code Sign FxPlug frameworks
+        basedOnDependencyAnalysis: false
+        script: |
+          set -e
+          mkdir -p "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+          for fw in FxPlug PluginManager; do
+            rsync --archive --links --whole-file --no-owner --no-group --checksum --exclude='Headers' --exclude='Modules' \
+              "/Library/Developer/Frameworks/${fw}.framework/" "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/${fw}.framework/"
+            codesign --force --sign "${CODE_SIGN_IDENTITY}" "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/${fw}.framework"
+          done

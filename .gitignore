@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Python
+.venv/
+.venv-train/
+__pycache__/
+*.pyc
+
+# Swift / Xcode build output
+EyeContactKit/.build/
+EyeContactKit/.swiftpm/
+EyeContactFx/build/
+xcuserdata/
+DerivedData/
+
+# Third-party checkout (clone separately: https://github.com/KwaiVGI/LivePortrait)
+LivePortrait/
+
+# Datasets, training runs, and sample media (large / not redistributable)
+/data/
+/runs/
+/test/
+*.mov
+*.mp4

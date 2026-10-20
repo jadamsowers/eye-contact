@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0081BDA9D27E2FA5E88EBA08 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7AFBE6A326F2833DFA739C /* Accelerate.framework */; };
+		20CD41886F3D4B468AF90562 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF0AE1E823720529AC718BB3 /* InfoPlist.strings */; };
+		219780369092237E7E3A75C4 /* GazeWarpV2.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = ABC9A9FC6C65275B1D686940 /* GazeWarpV2.mlpackage */; };
+		23546AC015B37CC1D6F555BC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781E20339F9CE6E1748E097 /* main.swift */; };
+		35C5F0B324E729D1574E833C /* GazeWarpV3.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 585F23C9E1891611A135411B /* GazeWarpV3.mlpackage */; };
+		3E8761D528E0777E25EF53FB /* EyeContactPlugIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B063631A01A69AB2BD6F3A2 /* EyeContactPlugIn.swift */; };
+		5E51BCA6E60F547B63942212 /* FxPlug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D532E21037A7C811B5EF5F /* FxPlug.framework */; };
+		8B4178DC54B1936606A5F456 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC21D2B1DB21BC5F10114C6F /* Localizable.strings */; };
+		9B5ADD12229787007204EB89 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AEC9F771B69BBA6B0E90A0 /* main.swift */; };
+		BF3AA7E9EE833C4331562AE5 /* PluginManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B9F200FA80CD898A8F0EBA /* PluginManager.framework */; };
+		DFFA7321DA2908C622B19EFA /* EyeContactXPC.bundle in Embed Dependencies */ = {isa = PBXBuildFile; fileRef = 2BEA8FB2661D1F70AB4EB5F5 /* EyeContactXPC.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED7CA5857ACDD3B8C1C064CD /* EyeContactCore in Frameworks */ = {isa = PBXBuildFile; productRef = D42EC8E5FE8562EAA3234B6E /* EyeContactCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4EB49A9DCBC92D1F4B03AF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DF10AADFAC01B8BA04F6329 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30D92D0C677923AB95C9E2F0;
+			remoteInfo = EyeContactXPC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		30C8C36CB0CEBBCB4E3882CC /* Embed Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DFFA7321DA2908C622B19EFA /* EyeContactXPC.bundle in Embed Dependencies */,
+			);
+			name = "Embed Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B72AA79C351AFF3F1518342 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		1BB6A386092C48E42BCC364C /* SandboxEntitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SandboxEntitlements.entitlements; sourceTree = "<group>"; };
+		2BEA8FB2661D1F70AB4EB5F5 /* EyeContactXPC.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeContactXPC.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		31D532E21037A7C811B5EF5F /* FxPlug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FxPlug.framework; path = ../../../../../Library/Developer/Frameworks/FxPlug.framework; sourceTree = "<group>"; };
+		3A56BEFE81AB6007E98BCA6E /* Plugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Plugin.entitlements; sourceTree = "<group>"; };
+		56B9C6FE530DDF15CC9F5CC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		585F23C9E1891611A135411B /* GazeWarpV3.mlpackage */ = {isa = PBXFileReference; path = GazeWarpV3.mlpackage; sourceTree = "<group>"; };
+		64AEC9F771B69BBA6B0E90A0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7E7AFBE6A326F2833DFA739C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		97C4A13FB436956E2502D161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9B063631A01A69AB2BD6F3A2 /* EyeContactPlugIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeContactPlugIn.swift; sourceTree = "<group>"; };
+		A5B9F200FA80CD898A8F0EBA /* PluginManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PluginManager.framework; path = ../../../../../Library/Developer/Frameworks/PluginManager.framework; sourceTree = "<group>"; };
+		ABC9A9FC6C65275B1D686940 /* GazeWarpV2.mlpackage */ = {isa = PBXFileReference; path = GazeWarpV2.mlpackage; sourceTree = "<group>"; };
+		B8C439C86336A0069212D728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BB316F6385B620A6DFAC1324 /* EyeContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBABB9F789AC2FDDF163F802 /* EyeContactKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = EyeContactKit; path = ../EyeContactKit; sourceTree = SOURCE_ROOT; };
+		E781E20339F9CE6E1748E097 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F447C7EE83A4BE1C7F2E5B13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACC39872D0BF789433079B11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED7CA5857ACDD3B8C1C064CD /* EyeContactCore in Frameworks */,
+				5E51BCA6E60F547B63942212 /* FxPlug.framework in Frameworks */,
+				BF3AA7E9EE833C4331562AE5 /* PluginManager.framework in Frameworks */,
+				0081BDA9D27E2FA5E88EBA08 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DB675595361DCBAB728A316 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CBABB9F789AC2FDDF163F802 /* EyeContactKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		80480FD8323E845418ED13A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E7AFBE6A326F2833DFA739C /* Accelerate.framework */,
+				31D532E21037A7C811B5EF5F /* FxPlug.framework */,
+				A5B9F200FA80CD898A8F0EBA /* PluginManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B05E7C2401F9EF543B547C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB316F6385B620A6DFAC1324 /* EyeContact.app */,
+				2BEA8FB2661D1F70AB4EB5F5 /* EyeContactXPC.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A142A42B0CAB2B655D3771EA = {
+			isa = PBXGroup;
+			children = (
+				F6FC3494041AD513B1DBE1D3 /* App */,
+				4DB675595361DCBAB728A316 /* Packages */,
+				E5935778DEC9698B1F6A8810 /* Plugin */,
+				80480FD8323E845418ED13A4 /* Frameworks */,
+				9B05E7C2401F9EF543B547C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5935778DEC9698B1F6A8810 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				1B72AA79C351AFF3F1518342 /* Bridging-Header.h */,
+				9B063631A01A69AB2BD6F3A2 /* EyeContactPlugIn.swift */,
+				ABC9A9FC6C65275B1D686940 /* GazeWarpV2.mlpackage */,
+				585F23C9E1891611A135411B /* GazeWarpV3.mlpackage */,
+				B8C439C86336A0069212D728 /* Info.plist */,
+				64AEC9F771B69BBA6B0E90A0 /* main.swift */,
+				3A56BEFE81AB6007E98BCA6E /* Plugin.entitlements */,
+				BF0AE1E823720529AC718BB3 /* InfoPlist.strings */,
+				EC21D2B1DB21BC5F10114C6F /* Localizable.strings */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+		F6FC3494041AD513B1DBE1D3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				97C4A13FB436956E2502D161 /* Info.plist */,
+				E781E20339F9CE6E1748E097 /* main.swift */,
+				1BB6A386092C48E42BCC364C /* SandboxEntitlements.entitlements */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30D92D0C677923AB95C9E2F0 /* EyeContactXPC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27CB1427FF32394B0E23126E /* Build configuration list for PBXNativeTarget "EyeContactXPC" */;
+			buildPhases = (
+				03749CC7390BC710D71AA76C /* Sources */,
+				1E2F1201264586ECFB4D2692 /* Resources */,
+				ACC39872D0BF789433079B11 /* Frameworks */,
+				FECD762F8C13030C38B0DD3A /* Copy and Code Sign FxPlug frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EyeContactXPC;
+			packageProductDependencies = (
+				D42EC8E5FE8562EAA3234B6E /* EyeContactCore */,
+			);
+			productName = EyeContactXPC;
+			productReference = 2BEA8FB2661D1F70AB4EB5F5 /* EyeContactXPC.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D5BD8375D5EB726E5F89EEE5 /* EyeContact */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B5364E40C224576827FC73B /* Build configuration list for PBXNativeTarget "EyeContact" */;
+			buildPhases = (
+				494A17319224C49DB997B986 /* Sources */,
+				30C8C36CB0CEBBCB4E3882CC /* Embed Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F6AE50906EE290F53F72F0F /* PBXTargetDependency */,
+			);
+			name = EyeContact;
+			packageProductDependencies = (
+			);
+			productName = EyeContact;
+			productReference = BB316F6385B620A6DFAC1324 /* EyeContact.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DF10AADFAC01B8BA04F6329 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					30D92D0C677923AB95C9E2F0 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					D5BD8375D5EB726E5F89EEE5 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 2350533CC5146E132C9C63F8 /* Build configuration list for PBXProject "EyeContactFx" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = A142A42B0CAB2B655D3771EA;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7958CEEA1216E024236BFE63 /* XCLocalSwiftPackageReference "../EyeContactKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9B05E7C2401F9EF543B547C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5BD8375D5EB726E5F89EEE5 /* EyeContact */,
+				30D92D0C677923AB95C9E2F0 /* EyeContactXPC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E2F1201264586ECFB4D2692 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20CD41886F3D4B468AF90562 /* InfoPlist.strings in Resources */,
+				8B4178DC54B1936606A5F456 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FECD762F8C13030C38B0DD3A /* Copy and Code Sign FxPlug frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy and Code Sign FxPlug frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nmkdir -p \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nfor fw in FxPlug PluginManager; do\n  rsync --archive --links --whole-file --no-owner --no-group --checksum --exclude='Headers' --exclude='Modules' \\\n    \"/Library/Developer/Frameworks/${fw}.framework/\" \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/${fw}.framework/\"\n  codesign --force --sign \"${CODE_SIGN_IDENTITY}\" \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/${fw}.framework\"\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03749CC7390BC710D71AA76C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8761D528E0777E25EF53FB /* EyeContactPlugIn.swift in Sources */,
+				219780369092237E7E3A75C4 /* GazeWarpV2.mlpackage in Sources */,
+				35C5F0B324E729D1574E833C /* GazeWarpV3.mlpackage in Sources */,
+				9B5ADD12229787007204EB89 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		494A17319224C49DB997B986 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23546AC015B37CC1D6F555BC /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F6AE50906EE290F53F72F0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30D92D0C677923AB95C9E2F0 /* EyeContactXPC */;
+			targetProxy = E4EB49A9DCBC92D1F4B03AF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF0AE1E823720529AC718BB3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F447C7EE83A4BE1C7F2E5B13 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC21D2B1DB21BC5F10114C6F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56B9C6FE530DDF15CC9F5CC0 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		164C741C81C4457365D9E281 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Plugin/Plugin.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Library/Developer/Frameworks\"",
+				);
+				INFOPLIST_FILE = Plugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = local.eyecontact.app.xpc;
+				PRODUCT_NAME = "Eye Contact XPC Service";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Plugin/Bridging-Header.h";
+				WRAPPER_EXTENSION = pluginkit;
+			};
+			name = Debug;
+		};
+		16C5A1CEB2FA4F3B5F218070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = /Library/Developer/SDKs/FxPlug.sdk;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "/Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks /Library/Developer/Frameworks $(inherited)";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5;
+			};
+			name = Debug;
+		};
+		3AC5FFBB43269A9C544F137A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/SandboxEntitlements.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.eyecontact.app;
+				PRODUCT_NAME = "Eye Contact";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A34A55FE9D684B0C6262C71C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Plugin/Plugin.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Library/Developer/Frameworks\"",
+				);
+				INFOPLIST_FILE = Plugin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = local.eyecontact.app.xpc;
+				PRODUCT_NAME = "Eye Contact XPC Service";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Plugin/Bridging-Header.h";
+				WRAPPER_EXTENSION = pluginkit;
+			};
+			name = Release;
+		};
+		CE366E541FCE41299BABE553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = /Library/Developer/SDKs/FxPlug.sdk;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = "/Library/Developer/SDKs/FxPlug.sdk/Library/Frameworks /Library/Developer/Frameworks $(inherited)";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5;
+			};
+			name = Release;
+		};
+		FF876E404B31532741D67348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/SandboxEntitlements.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.eyecontact.app;
+				PRODUCT_NAME = "Eye Contact";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B5364E40C224576827FC73B /* Build configuration list for PBXNativeTarget "EyeContact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AC5FFBB43269A9C544F137A /* Debug */,
+				FF876E404B31532741D67348 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2350533CC5146E132C9C63F8 /* Build configuration list for PBXProject "EyeContactFx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16C5A1CEB2FA4F3B5F218070 /* Debug */,
+				CE366E541FCE41299BABE553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		27CB1427FF32394B0E23126E /* Build configuration list for PBXNativeTarget "EyeContactXPC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				164C741C81C4457365D9E281 /* Debug */,
+				A34A55FE9D684B0C6262C71C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		7958CEEA1216E024236BFE63 /* XCLocalSwiftPackageReference "../EyeContactKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../EyeContactKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D42EC8E5FE8562EAA3234B6E /* EyeContactCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = EyeContactCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 9DF10AADFAC01B8BA04F6329 /* Project object */;
+}
