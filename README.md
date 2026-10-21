@@ -49,6 +49,10 @@ open "/Applications/Eye Contact.app"   # registers the plug-in; restart Final Cu
 
 Or run `EyeContactFx/install.sh`, which builds, installs, and also copies the Motion template.
 
+To install on another Mac without building there, run `EyeContactFx/package.sh` (add `--no-build` to reuse the last
+build). It writes `dist/EyeContact.zip` with the app, the Motion template, and `install.command`. On the other Mac,
+unzip it and run `install.command`, which clears the quarantine flag so the ad-hoc signature is accepted. The build is arm64 only.
+
 - `MotionTemplate/Eye Contact/`: the Motion effect template that wraps the FxPlug filter. Final Cut Pro only lists the
   effect through this template, so it must be copied to `~/Movies/Motion Templates.localized/Effects.localized/`
 
