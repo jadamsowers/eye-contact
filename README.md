@@ -47,6 +47,11 @@ ditto "build/Build/Products/Release/Eye Contact.app" "/Applications/Eye Contact.
 open "/Applications/Eye Contact.app"   # registers the plug-in; restart Final Cut Pro afterwards
 ```
 
+Or run `EyeContactFx/install.sh`, which builds, installs, and also copies the Motion template.
+
+- `MotionTemplate/Eye Contact/`: the Motion effect template that wraps the FxPlug filter. Final Cut Pro only lists the
+  effect through this template, so it must be copied to `~/Movies/Motion Templates.localized/Effects.localized/`
+
 - `Plugin/EyeContactPlugIn.swift`: the FxTileableEffect
   - Requests the full frame, downsamples it to 1280 px BGRA for Vision, and warps FCP's texture directly
   - Raw measurements go into a per-instance `TrackingCache` keyed by frame time and are smoothed on read with a centered Gaussian over whatever neighbors have been measured. FCP renders out of order, so smoothing never depends on render order. On a first, linear playback, smoothing only sees past frames; renders after that see both sides

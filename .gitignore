@@ -23,3 +23,6 @@ LivePortrait/
 /test/
 *.mov
 *.mp4
+
+# Local packaged builds
+dist/
